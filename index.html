@@ -1,119 +1,219 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Shrirang Patil</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <link rel="icon" type="image/png" href="images/myimgrmbg.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrirang Patil - AI/ML Research Engineer</title>
+    <meta name="description" content="AI/ML Research Engineer specializing in Human-Robot Interaction, conversational AI, and speech technologies. Seeking AI/ML Engineer & Research Scientist roles.">
+    <meta name="keywords" content="AI, ML, Robotics, Human-Robot Interaction, Machine Learning, Research Engineer, Oregon State University">
+    <meta name="author" content="Shrirang Patil">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-	<body class="is-preload">
+<body>
+    <!-- Hero Section - Conversational Greeting -->
+    <section class="hero">
+        <div class="greeting-container">
+            <h1 id="multilingual-greeting" class="hero-greeting"></h1>
+            <h2 class="hero-name">.i'm shrirang.</h2>
+            <p class="hero-subtitle">AI/ML Research Engineer | Human-Robot Interaction Specialist</p>
+            <p class="hero-context">Currently building conversational AI systems @ Oregon State University</p>
+            
+            <div class="chat-interface">
+                <div class="chat-prompt">
+                    <span class="chat-label">Type your message...</span>
+                    <input type="text" placeholder="ask me about my research" class="chat-input" id="chat-input">
+                    <div class="suggested-actions">
+                        <button class="chat-btn" data-action="work">→ view my work</button>
+                        <button class="chat-btn" data-action="research">→ see publications</button>
+                        <button class="chat-btn" data-action="resume">→ download resume</button>
+                    </div>
+                </div>
+                <div class="chat-response" id="chat-response"></div>
+            </div>
+        </div>
+    </section>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+    <!-- About Section - Conversational -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="conversation-block">
+                <h2>So, who am I?</h2>
+                <p>I'm an AI researcher who gets excited about making robots understand humans better. Currently wrapping up my MS at Oregon State University (Dec 2025) while working on conversational AI systems that actually work in the real world.</p>
+                
+                <div class="current-focus">
+                    <h3>What am I working on right now?</h3>
+                    <ul class="focus-list">
+                        <li>Building AI "Clipboard" agents for robot experiments</li>
+                        <li>Teaching underwater robots to follow voice commands</li>
+                        <li>Publishing research on human-robot interaction</li>
+                        <li>Looking for my next adventure in AI/ML engineering</li>
+                    </ul>
+                </div>
+                
+                <div class="expertise-tags">
+                    <span class="tag">Human-Robot Interaction</span>
+                    <span class="tag">Conversational AI</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Speech Recognition</span>
+                    <span class="tag">Full-Stack Development</span>
+                    <span class="tag">Cloud Technologies</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>
-						Shrirang Patil
-						</h1>
-						<p><b><font size=6px>AI & Robotics Engineer</font></b><br> Graduate Research Assistant at Oregon State University pursuing a Master's degree in AI (expected June 2025)
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+    <!-- Projects Section - Interactive -->
+    <section id="work" class="section">
+        <div class="container">
+            <h2>What have I built?</h2>
+            <p class="section-intro">Here are some projects I'm particularly proud of...</p>
+            
+            <div class="projects-grid">
+                <div class="project-card interactive">
+                    <h3>Speech2Action Robot Control</h3>
+                    <p class="project-description">Voice-guided underwater robot achieving 85% task success rate</p>
+                    <div class="project-meta">
+                        <span class="tech">ROS, PyTorch, Speech Recognition</span>
+                        <span class="publication">Published: OCEANS 2025</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="btn-link">→ see the demo</a>
+                        <a href="#" class="btn-link">→ read the paper</a>
+                    </div>
+                </div>
+                
+                <div class="project-card interactive">
+                    <h3>Conversational AI "Clipboard"</h3>
+                    <p class="project-description">Making robot experiment setup as easy as having a conversation</p>
+                    <div class="project-meta">
+                        <span class="tech">LLMs, HRI, Python</span>
+                        <span class="publication">Published: ICSR 2025</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="btn-link">→ read paper</a>
+                        <a href="#" class="btn-link">→ view code</a>
+                    </div>
+                </div>
+                
+                <div class="project-card interactive">
+                    <h3>AI-Powered Communication System</h3>
+                    <p class="project-description">Real-time transcription with 94% intent recognition accuracy</p>
+                    <div class="project-meta">
+                        <span class="tech">Python, Flask, OpenAI, AWS</span>
+                        <span class="publication">Production System</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="btn-link">→ see it live</a>
+                        <a href="#" class="btn-link">→ learn more</a>
+                    </div>
+                </div>
+                
+                <div class="project-card interactive">
+                    <h3>Multilingual ASR System</h3>
+                    <p class="project-description">92% accuracy across 27 languages, 10K+ audio files</p>
+                    <div class="project-meta">
+                        <span class="tech">CNN, RNN, Bi-GRU, MFCC</span>
+                        <span class="publication">Research: NUS</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="btn-link">→ view research</a>
+                        <a href="#" class="btn-link">→ see results</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Innovating AI-Human-Robot Synergy!</a>
-					</header>
+    <!-- Publications Section -->
+    <section id="research" class="section">
+        <div class="container">
+            <h2>What have I discovered?</h2>
+            <p class="section-intro">Research that's making robots more helpful...</p>
+            
+            <div class="publications-list">
+                <article class="publication-item">
+                    <h3>Clipboard: Conversational AI for Robot Experiments</h3>
+                    <p class="pub-venue">ICSR 2025 • International Conference on Social Robotics</p>
+                    <p class="pub-description">Making robot experiment setup as easy as having a conversation</p>
+                    <div class="pub-actions">
+                        <a href="#" class="btn-link">→ read paper</a>
+                        <a href="#" class="btn-link">→ view code</a>
+                    </div>
+                </article>
+                
+                <article class="publication-item">
+                    <h3>Verbal Control for Underwater Manipulation</h3>
+                    <p class="pub-venue">OCEANS 2025 • IEEE/MTS OCEANS Conference</p>
+                    <p class="pub-description">Teaching underwater robots to follow voice commands with 85% success rate</p>
+                    <div class="pub-actions">
+                        <a href="#" class="btn-link">→ read paper</a>
+                        <a href="#" class="btn-link">→ see demo</a>
+                    </div>
+                </article>
+                
+                <article class="publication-item">
+                    <h3>Act-it-Out Method for Robot Arm Actions</h3>
+                    <p class="pub-venue">ICSR 2025 • International Conference on Social Robotics</p>
+                    <p class="pub-description">Novel approach to teaching robots through human demonstration</p>
+                    <div class="pub-actions">
+                        <a href="#" class="btn-link">→ read paper</a>
+                        <a href="#" class="btn-link">→ learn more</a>
+                    </div>
+                </article>
+                
+                <article class="publication-item">
+                    <h3>LLMs in Robot-Supported Mindfulness</h3>
+                    <p class="pub-venue">HRI 2024 • ACM/IEEE International Conference on Human-Robot Interaction</p>
+                    <p class="pub-description">Using large language models to enhance robot-assisted mindfulness practices</p>
+                    <div class="pub-actions">
+                        <a href="#" class="btn-link">→ read paper</a>
+                        <a href="#" class="btn-link">→ view study</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">About Me</a></li>
-							<li><a href="generic.html">CV</a></li>
-							<li><a href="elements.html">Projects</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/imshrirangpatil/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/imshrirangpatil" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://twitter.com/imshrirangpatil" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://instagram.com/imshrirangpatil" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						</ul>
-					</nav>
+    <!-- Contact Section - Direct -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Let's talk.</h2>
+            <p class="contact-intro">Interested in AI/ML collaboration or just want to chat about robots?</p>
+            
+            <div class="contact-grid">
+                <a href="mailto:imshrirangpatil@gmail.com" class="contact-item">
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">imshrirangpatil@gmail.com</span>
+                </a>
+                <a href="https://linkedin.com/in/imshrirangpatil" class="contact-item" target="_blank">
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">@imshrirangpatil</span>
+                </a>
+                <a href="https://github.com/imshrirangpatil" class="contact-item" target="_blank">
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-value">@imshrirangpatil</span>
+                </a>
+            </div>
+            
+            <p class="availability">Available for new opportunities • Graduating December 2025</p>
+        </div>
+    </section>
 
-				<!-- Main -->
-					<div id="main">
-						<!-- Featured Post -->
-<div class="image-txt-container">
-    <img src="images/myimgrmbg.png" width="440" height="440">
-    <article class="post featured">
-        <center>
-            <h2>Hey there 👋</h2>
-            <h3>I am an AI & Robotics Engineer:</h3>
-        </center>
-        <ul>
-            <li>💪 Passionate about solving complex problems in diverse domains</li>
-            <li>🌍 Currently working on developing AI-driven Human-Robot solutions for Interaction, Enhancement & Mindfulness</li>
-            <li>🔥 Experienced in handling challenging tasks in Artificial Intelligence & Machine Learning</li>
-            <li>🎓 Holds a Bachelor's degree in Computer Science Engineering with a specialization in AI and ML</li>
-            <li>☀️ Aiming for the Innovative AI-Human-Robot Synergy!</li>
-        </ul>
-        <br>
-        <center>
-	    <form action="https://www.overleaf.com/read/kwsxwkdkcfhd#e43777/output/output.pdf" target="_blank">
-                <input type="submit" value="Resume"/>
-            </form>
-        </center>
-    </article>
-</div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Shrirang Patil. All rights reserved.</p>
+        </div>
+    </footer>
 
-
-						<!-- Footer -->
-							<footer>
-								<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="imshrirangpatil" data-color="#5f7fff" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
-
-								<center>
-
-									<section>
-										<h3></h3>
-										<ul class="icons alt">
-											<li><a href="https://www.linkedin.com/in/imshrirangpatil/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							                <li><a href="https://github.com/imshrirangpatil" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							                <li><a href="https://twitter.com/imshrirangpatil" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							                <li><a href="https://instagram.com/imshrirangpatil" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						                </ul>
-									
-								    </section>
-							    </center>
-							</footer>
-
-					</div>
-
-
-					
-
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li> Shrirang Patil </li><li> <a href="#">Innovating AI-Human-Robot Synergy!</a></li></ul>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-	</body>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
 </html>
