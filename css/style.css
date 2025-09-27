@@ -132,6 +132,7 @@ a:hover {
     font-weight: var(--font-weight-medium);
     color: var(--color-black);
     margin-bottom: var(--spacing-sm);
+    text-transform: none; /* Ensure proper capitalization */
 }
 
 .hero-subtitle {
