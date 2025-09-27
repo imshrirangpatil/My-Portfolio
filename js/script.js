@@ -56,18 +56,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Conversation responses
     const conversationResponses = {
-        'research': 'I focus on making AI systems that understand human intentions better. My recent work includes building conversational agents for robot experiments and teaching underwater robots to follow voice commands.',
-        'work': 'I\'ve built voice-controlled underwater robots, multilingual speech recognition systems, and AI assistants for research labs. Check out my projects below!',
-        'projects': 'I\'ve built voice-controlled underwater robots, multilingual speech recognition systems, and AI assistants for research labs. Check out my projects below!',
-        'publications': 'I\'ve published research on human-AI/robot interaction, conversational AI, and speech technologies. My work has been accepted at top conferences like ICSR, OCEANS, and HRI.',
-        'experience': 'Currently a Graduate Research Assistant at Oregon State University, previously worked on multilingual ASR at National University of Singapore.',
-        'contact': 'Best way to reach me is email: imshrirangpatil@gmail.com. I\'m always excited to chat about AI/ML opportunities!',
-        'resume': 'You can view my resume in the section below. It includes my research experience, publications, and technical skills. Feel free to download it if you\'d like!',
-        'ai': 'I work on conversational AI systems that help robots understand and respond to human commands. My research focuses on making human-AI/robot interaction more natural.',
-        'ml': 'I specialize in machine learning for robotics applications, including speech recognition, natural language processing, and computer vision.',
-        'robotics': 'I build robots that can understand and respond to human commands. My work includes underwater robots, conversational AI assistants, and human-AI/robot interaction systems.',
-        'hello': 'Hi there! I\'m Shrirang, an AI/ML researcher. Feel free to ask me about my work, research, or just say hello!',
-        'hi': 'Hi there! I\'m Shrirang, an AI/ML researcher. Feel free to ask me about my work, research, or just say hello!'
+        'research': 'I get excited about making AI systems and robots understand humans better! My recent work includes building AI "Clipboard" agents for robot experiments, teaching underwater robots to follow voice commands, and developing emotion analysis systems for sports performance.',
+        'work': 'I\'ve built some cool stuff! Voice-controlled underwater robots, emotion analysis systems with 90.67% accuracy, Python-based robot animators, and multilingual speech recognition systems. Check out my projects below!',
+        'projects': 'I\'ve built some cool stuff! Voice-controlled underwater robots, emotion analysis systems with 90.67% accuracy, Python-based robot animators, and multilingual speech recognition systems. Check out my projects below!',
+        'publications': 'I\'ve published research on human-AI/robot interaction, conversational AI, and speech technologies. My work has been accepted at top conferences like ICSR FoMoSR Workshop, OCEANS, and HRI LLMs in HRI Workshop.',
+        'experience': 'Currently wrapping up my MS at Oregon State University (Dec 2025) as a Graduate Research Assistant, previously worked on multilingual ASR at National University of Singapore.',
+        'contact': 'Best way to reach me is email: imshrirangpatil@gmail.com. You can also find me on LinkedIn, GitHub, and X/Twitter @imshrirangpatil. I\'m always excited to chat about AI/ML opportunities!',
+        'resume': 'You can download my resume below. It includes my research experience, publications, and technical skills.',
+        'ai': 'I work on conversational AI systems that help robots understand and respond to human commands. My research focuses on making human-AI/robot interaction more natural and intuitive.',
+        'ml': 'I specialize in machine learning for robotics applications, including speech recognition, natural language processing, computer vision, and emotion analysis. I love working with CNNs, Bi-LSTMs, and deep learning models.',
+        'robotics': 'I build robots that can understand and respond to human commands! My work includes underwater robots, conversational AI assistants, Python-based robot animators, and human-AI/robot interaction systems.',
+        'emotion': 'I developed an emotion analysis system for sports performance! It achieved 90.67% accuracy on the CK+485 dataset using CNN and Bi-LSTM models, providing quantified emotional metrics for athletic insights.',
+        'sports': 'I built an emotion analysis system for sports performance! It achieved 90.67% accuracy on the CK+485 dataset using CNN and Bi-LSTM models, providing quantified emotional metrics for athletic insights.',
+        'hello': 'Hi there! I\'m Shrirang, an AI/ML researcher who gets excited about making AI systems and robots understand humans better. Feel free to ask me about my work, research, or just say hello!',
+        'hi': 'Hi there! I\'m Shrirang, an AI/ML researcher who gets excited about making AI systems and robots understand humans better. Feel free to ask me about my work, research, or just say hello!'
     };
 
     function handleChatInput(input) {
@@ -120,8 +122,11 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (action === 'research') {
                 document.getElementById('research').scrollIntoView({ behavior: 'smooth' });
             } else if (action === 'resume') {
-                // Scroll to resume section
-                document.getElementById('resume').scrollIntoView({ behavior: 'smooth' });
+                // Create temporary download link
+                const link = document.createElement('a');
+                link.href = 'docs/Shrirang_Patil_Resume.pdf';
+                link.download = 'Shrirang_Patil_Resume.pdf';
+                link.click();
             }
         });
     });
@@ -221,5 +226,6 @@ document.addEventListener('DOMContentLoaded', function() {
     - Email: imshrirangpatil@gmail.com
     - LinkedIn: linkedin.com/in/imshrirangpatil
     - GitHub: github.com/imshrirangpatil
+    - X/Twitter: x.com/imshrirangpatil
     `);
 });

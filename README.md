@@ -170,6 +170,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - 📧 Email: [imshrirangpatil@gmail.com](mailto:imshrirangpatil@gmail.com)
 - 💼 LinkedIn: [linkedin.com/in/imshrirangpatil](https://linkedin.com/in/imshrirangpatil)
 - 💻 GitHub: [github.com/imshrirangpatil](https://github.com/imshrirangpatil)
+- 🐦 X/Twitter: [x.com/imshrirangpatil](https://x.com/imshrirangpatil)
 - 🌐 Portfolio: [imshrirangpatil.github.io/My-Portfolio](https://imshrirangpatil.github.io/My-Portfolio)
 
 ---
