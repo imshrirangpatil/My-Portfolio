@@ -59,13 +59,13 @@ document.addEventListener('DOMContentLoaded', function() {
         'research': 'I focus on making AI systems that understand human intentions better. My recent work includes building conversational agents for robot experiments and teaching underwater robots to follow voice commands.',
         'work': 'I\'ve built voice-controlled underwater robots, multilingual speech recognition systems, and AI assistants for research labs. Check out my projects below!',
         'projects': 'I\'ve built voice-controlled underwater robots, multilingual speech recognition systems, and AI assistants for research labs. Check out my projects below!',
-        'publications': 'I\'ve published research on human-robot interaction, conversational AI, and speech technologies. My work has been accepted at top conferences like ICSR, OCEANS, and HRI.',
+        'publications': 'I\'ve published research on human-AI/robot interaction, conversational AI, and speech technologies. My work has been accepted at top conferences like ICSR, OCEANS, and HRI.',
         'experience': 'Currently a Graduate Research Assistant at Oregon State University, previously worked on multilingual ASR at National University of Singapore.',
         'contact': 'Best way to reach me is email: imshrirangpatil@gmail.com. I\'m always excited to chat about AI/ML opportunities!',
         'resume': 'You can download my resume below. It includes my research experience, publications, and technical skills.',
-        'ai': 'I work on conversational AI systems that help robots understand and respond to human commands. My research focuses on making human-robot interaction more natural.',
+        'ai': 'I work on conversational AI systems that help robots understand and respond to human commands. My research focuses on making human-AI/robot interaction more natural.',
         'ml': 'I specialize in machine learning for robotics applications, including speech recognition, natural language processing, and computer vision.',
-        'robotics': 'I build robots that can understand and respond to human commands. My work includes underwater robots, conversational AI assistants, and human-robot interaction systems.',
+        'robotics': 'I build robots that can understand and respond to human commands. My work includes underwater robots, conversational AI assistants, and human-AI/robot interaction systems.',
         'hello': 'Hi there! I\'m Shrirang, an AI/ML researcher. Feel free to ask me about my work, research, or just say hello!',
         'hi': 'Hi there! I\'m Shrirang, an AI/ML researcher. Feel free to ask me about my work, research, or just say hello!'
     };
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (action === 'resume') {
                 // Create temporary download link
                 const link = document.createElement('a');
-                link.href = 'docs/resume.pdf';
+                link.href = 'docs/Shrirang_Patil_Resume.pdf';
                 link.download = 'Shrirang_Patil_Resume.pdf';
                 link.click();
             }

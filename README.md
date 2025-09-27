@@ -1,6 +1,6 @@
 # Shrirang Patil - AI/ML Research Engineer Portfolio
 
-A modern, conversational portfolio website inspired by Adrian Zumbrunnen's design philosophy, featuring interactive elements and multilingual typewriter effects.
+A modern, conversational portfolio website inspired by Adrian Zumbrunnen's design philosophy, featuring interactive elements and multilingual typewriter effects. Showcases expertise in Human-AI/Robot Interaction and conversational AI systems.
 
 🌐 **Live Demo**: [https://imshrirangpatil.github.io/My-Portfolio/](https://imshrirangpatil.github.io/My-Portfolio/)
 
@@ -8,7 +8,7 @@ A modern, conversational portfolio website inspired by Adrian Zumbrunnen's desig
 
 ### 🎯 **Conversational Design**
 - **Multilingual Typewriter Effect**: Cycles through "Hi" in 8 languages (English, Hindi, Spanish, French, Japanese, Korean, Chinese, German)
-- **Interactive Chat Interface**: Users can ask questions and get contextual responses
+- **Interactive Chat Interface**: Users can ask questions and get contextual responses about Human-AI/Robot Interaction
 - **Adrian Zumbrunnen-inspired**: Clean, minimalist design with conversational tone
 
 ### 🎨 **Modern UI/UX**
@@ -103,7 +103,7 @@ open http://localhost:8000
 ## 🎨 **Design Philosophy**
 
 ### **Adrian Zumbrunnen Inspiration**
-- **Conversational Tone**: Direct, personal language
+- **Conversational Tone**: Direct, personal language about Human-AI/Robot Interaction
 - **Minimalist Aesthetic**: Black, gray, white color palette
 - **Interactive Elements**: Chat interface and hover effects
 - **Clean Typography**: Inter font with proper hierarchy
