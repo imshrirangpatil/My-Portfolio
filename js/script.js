@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'publications': 'I\'ve published research on human-AI/robot interaction, conversational AI, and speech technologies. My work has been accepted at top conferences like ICSR, OCEANS, and HRI.',
         'experience': 'Currently a Graduate Research Assistant at Oregon State University, previously worked on multilingual ASR at National University of Singapore.',
         'contact': 'Best way to reach me is email: imshrirangpatil@gmail.com. I\'m always excited to chat about AI/ML opportunities!',
-        'resume': 'You can download my resume below. It includes my research experience, publications, and technical skills.',
+        'resume': 'You can view my resume in the section below. It includes my research experience, publications, and technical skills. Feel free to download it if you\'d like!',
         'ai': 'I work on conversational AI systems that help robots understand and respond to human commands. My research focuses on making human-AI/robot interaction more natural.',
         'ml': 'I specialize in machine learning for robotics applications, including speech recognition, natural language processing, and computer vision.',
         'robotics': 'I build robots that can understand and respond to human commands. My work includes underwater robots, conversational AI assistants, and human-AI/robot interaction systems.',
@@ -120,11 +120,8 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (action === 'research') {
                 document.getElementById('research').scrollIntoView({ behavior: 'smooth' });
             } else if (action === 'resume') {
-                // Create temporary download link
-                const link = document.createElement('a');
-                link.href = 'docs/Shrirang_Patil_Resume.pdf';
-                link.download = 'Shrirang_Patil_Resume.pdf';
-                link.click();
+                // Scroll to resume section
+                document.getElementById('resume').scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
