@@ -86,11 +86,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function showResponse(response) {
-        // Clear any existing timeout
+        // Clear any existing timeouts (both auto-hide and typing animation)
         if (chatResponse.timeoutId) {
             clearTimeout(chatResponse.timeoutId);
+            chatResponse.timeoutId = null;
+        }
+        if (chatResponse.typingTimeoutId) {
+            clearTimeout(chatResponse.typingTimeoutId);
+            chatResponse.typingTimeoutId = null;
         }
         
+        // Generate unique animation ID to track the current animation
+        const animationId = Date.now();
+        chatResponse._currentAnimationId = animationId;
+        
+        // Stop any ongoing typing animation by clearing text and removing classes
         chatResponse.textContent = '';
         chatResponse.classList.remove('typing', 'show');
         
@@ -99,22 +109,34 @@ document.addEventListener('DOMContentLoaded', function() {
         
         chatResponse.classList.add('show', 'typing');
         
-        // Typing animation
+        // Typing animation with proper cleanup
         let i = 0;
         const typingSpeed = 30;
         
         function typeChar() {
+            // Check if this animation is still the current one (not cancelled by new message)
+            if (chatResponse._currentAnimationId !== animationId) {
+                return;
+            }
+            
             if (i < response.length) {
                 chatResponse.textContent += response.charAt(i);
                 i++;
-                setTimeout(typeChar, typingSpeed);
+                chatResponse.typingTimeoutId = setTimeout(typeChar, typingSpeed);
             } else {
-                // Remove typing class to hide cursor
-                chatResponse.classList.remove('typing');
-                // Auto-hide after 8 seconds (longer since it's typed)
-                chatResponse.timeoutId = setTimeout(() => {
-                    chatResponse.classList.remove('show');
-                }, 8000);
+                // Only complete if this is still the current animation
+                if (chatResponse._currentAnimationId === animationId) {
+                    // Remove typing class to hide cursor
+                    chatResponse.classList.remove('typing');
+                    // Auto-hide after 8 seconds (longer since it's typed)
+                    chatResponse.timeoutId = setTimeout(() => {
+                        if (chatResponse._currentAnimationId === animationId) {
+                            chatResponse.classList.remove('show');
+                        }
+                        chatResponse.timeoutId = null;
+                    }, 8000);
+                }
+                chatResponse.typingTimeoutId = null;
             }
         }
         
@@ -250,4 +272,5 @@ document.addEventListener('DOMContentLoaded', function() {
     💡 Chat: "research", "projects", "voice", "contact"
     🔗 imshrirangpatil@gmail.com | Open to roles starting 2026
     `);
+});
 });
