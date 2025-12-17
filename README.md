@@ -1,27 +1,27 @@
-# Shrirang Patil - AI/ML Research Engineer Portfolio
+# Shrirang Patil - AI Engineer Portfolio
 
-A modern, conversational portfolio website inspired by Adrian Zumbrunnen's design philosophy, featuring interactive elements and multilingual typewriter effects. Showcases expertise in Human-AI/Robot Interaction and conversational AI systems.
+Conversational portfolio inspired by Adrian Zumbrunnen's design. Showcases production Conversational AI, NLP, Voice/ASR, and LLM applications.
 
 🌐 **Live Demo**: [https://imshrirangpatil.github.io/My-Portfolio/](https://imshrirangpatil.github.io/My-Portfolio/)
 
 ## ✨ Features
 
 ### 🎯 **Conversational Design**
-- **Multilingual Typewriter Effect**: Cycles through "Hi" in 8 languages (English, Hindi, Spanish, French, Japanese, Korean, Chinese, German)
-- **Interactive Chat Interface**: Users can ask questions and get contextual responses about Human-AI/Robot Interaction
-- **Adrian Zumbrunnen-inspired**: Clean, minimalist design with conversational tone
+- Multilingual typewriter (8 languages)
+- Interactive chat interface
+- Minimalist design
 
 ### 🎨 **Modern UI/UX**
-- **Single Column Layout**: Clean, centered design for optimal readability
-- **Responsive Design**: Mobile-first approach with smooth breakpoints
-- **Smooth Animations**: CSS transitions and JavaScript animations
-- **Accessibility**: Keyboard navigation and focus management
+- Single column layout
+- Responsive design
+- Smooth animations
+- Accessibility features
 
 ### 🚀 **Technical Features**
-- **Performance Optimized**: Intersection Observer, debounced scroll events
-- **Fast Loading**: Optimized CSS and JavaScript
-- **SEO Ready**: Proper meta tags and semantic HTML
-- **GitHub Pages Ready**: Automatic deployment workflow
+- Performance optimized
+- Fast loading
+- SEO ready
+- GitHub Pages deployment
 
 ## 🛠️ **Technologies Used**
 
@@ -59,24 +59,23 @@ My-Portfolio/
 - Quick action buttons
 
 ### 2. **About Section**
-- Conversational introduction
-- Current focus areas
-- Technical expertise tags
+- "What I'm Best At" - 3 core competencies
 
 ### 3. **Projects Section**
-- Interactive project cards
-- Technology stacks
-- Publication links
+- Flagship projects: Speaker-Listener, Clipboard, Multilingual ASR
 
-### 4. **Research Section**
-- Academic publications
-- Conference presentations
-- Research descriptions
+### 4. **Embodied AI Section**
+- Speech2Action project
 
-### 5. **Contact Section**
-- Direct contact information
-- Social media links
-- Availability status
+### 5. **Proof of Execution Section**
+- Dockerized services, datasets, evaluation loops
+
+### 6. **Publications Section**
+- Research at ICSR, OCEANS, HRI
+
+### 7. **Contact Section**
+- Open to roles starting 2026
+- Contact links and Resume PDF
 
 ## 🚀 **Deployment**
 
@@ -103,10 +102,11 @@ open http://localhost:8000
 ## 🎨 **Design Philosophy**
 
 ### **Adrian Zumbrunnen Inspiration**
-- **Conversational Tone**: Direct, personal language about Human-AI/Robot Interaction
+- **Conversational Tone**: Direct, personal language about production AI systems
 - **Minimalist Aesthetic**: Black, gray, white color palette
 - **Interactive Elements**: Chat interface and hover effects
 - **Clean Typography**: Inter font with proper hierarchy
+- **Focus on Shipping**: Emphasis on systems that actually work in production
 
 ### **Color Palette**
 ```css
@@ -166,12 +166,15 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📞 **Contact**
 
-**Shrirang Patil**
-- 📧 Email: [imshrirangpatil@gmail.com](mailto:imshrirangpatil@gmail.com)
-- 💼 LinkedIn: [linkedin.com/in/imshrirangpatil](https://linkedin.com/in/imshrirangpatil)
-- 💻 GitHub: [github.com/imshrirangpatil](https://github.com/imshrirangpatil)
-- 🐦 X/Twitter: [x.com/imshrirangpatil](https://x.com/imshrirangpatil)
-- 🌐 Portfolio: [imshrirangpatil.github.io/My-Portfolio](https://imshrirangpatil.github.io/My-Portfolio)
+**Shrirang Patil**  
+Open to Conversational AI / NLP / Voice AI roles starting 2026.
+
+- 📧 [imshrirangpatil@gmail.com](mailto:imshrirangpatil@gmail.com)
+- 💼 [LinkedIn](https://linkedin.com/in/imshrirangpatil)
+- 💻 [GitHub](https://github.com/imshrirangpatil)
+- 🐦 [X/Twitter](https://x.com/imshrirangpatil)
+- 📄 [Resume PDF](docs/Shrirang_Patil_Resume.pdf)
+- 🌐 [Portfolio](https://imshrirangpatil.github.io/My-Portfolio)
 
 ---
 

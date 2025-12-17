@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrirang Patil - AI/ML Research Engineer</title>
-    <meta name="description" content="AI/ML Research Engineer specializing in Human-Robot Interaction, conversational AI, and speech technologies. Seeking AI/ML Engineer & Research Scientist roles.">
-    <meta name="keywords" content="AI, ML, Robotics, Human-Robot Interaction, Machine Learning, Research Engineer, Oregon State University">
+    <title>Shrirang Patil - AI Engineer | Conversational AI, NLP, Agentic AI, Voice + LLM</title>
+    <meta name="description" content="AI Engineer (Conversational AI, NLP, Agentic AI) | Voice + LLM | Embodied AI | PyTorch, Transformers, LLM Fine-Tuning. Building production-minded real-time ASR, intent pipelines, and end-to-end demos. Open to Conversational AI / NLP / Voice AI roles starting 2026.">
+    <meta name="keywords" content="AI Engineer, Conversational AI, NLP, Agentic AI, Voice AI, LLM, Embodied AI, PyTorch, Transformers, LLM Fine-Tuning, ASR, Real-time Transcription, Intent Recognition">
     <meta name="author" content="Shrirang Patil">
     
     <!-- Fonts -->
@@ -22,17 +22,16 @@
         <div class="greeting-container">
             <h1 id="multilingual-greeting" class="hero-greeting"></h1>
             <h2 class="hero-name">I'm Shrirang</h2>
-            <p class="hero-subtitle">AI/ML Research Engineer | Human-AI/Robot Interaction Specialist</p>
-            <p class="hero-context">Currently building conversational AI systems @ Oregon State University</p>
+            <p class="hero-subtitle">AI Engineer (Conversational AI, NLP, Agentic AI) | Voice + LLM</p>
+            <p class="hero-context">Embodied AI | PyTorch, Transformers, LLM Fine-Tuning</p>
             
             <div class="chat-interface">
                 <div class="chat-prompt">
-                    <span class="chat-label">Type your message...</span>
-                    <input type="text" placeholder="Ask me about my research" class="chat-input" id="chat-input">
+                    <input type="text" placeholder="Ask me anything..." class="chat-input" id="chat-input">
                     <div class="suggested-actions">
-                        <button class="chat-btn" data-action="work">→ View My Work</button>
-                        <button class="chat-btn" data-action="research">→ See Publications</button>
-                        <button class="chat-btn" data-action="resume">→ Download Resume</button>
+                        <button class="chat-btn" data-action="work">→ Work</button>
+                        <button class="chat-btn" data-action="research">→ Research</button>
+                        <button class="chat-btn" data-action="resume">→ Resume</button>
                     </div>
                 </div>
                 <div class="chat-response" id="chat-response"></div>
@@ -44,27 +43,12 @@
     <section id="about" class="section">
         <div class="container">
             <div class="conversation-block">
-                <h2>So, Who Am I?</h2>
-                <p>I'm an AI researcher who gets excited about making AI systems and robots understand humans better. Currently wrapping up my MS at Oregon State University (Dec 2025) while working on conversational AI systems that actually work in the real world.</p>
-                
-                <div class="current-focus">
-                    <h3>What Am I Working On Right Now?</h3>
-                    <ul class="focus-list">
-                        <li>Building AI "Clipboard" agents for robot experiments</li>
-                        <li>Teaching underwater robots to follow voice commands</li>
-                        <li>Publishing research on human-AI/robot interaction</li>
-                        <li>Looking for my next adventure in AI/ML engineering</li>
-                    </ul>
-                </div>
-                
-                <div class="expertise-tags">
-                    <span class="tag">Human-AI/Robot Interaction</span>
-                <span class="tag">Conversational AI</span>
-                <span class="tag">Machine Learning</span>
-                <span class="tag">Speech Recognition</span>
-                <span class="tag">Full-Stack Development</span>
-                <span class="tag">Cloud Technologies</span>
-                </div>
+                <h2>What I'm Best At</h2>
+                <ul class="focus-list">
+                    <li>Building real-time voice AI backends that handle streaming ASR, WebSockets, and intent routing</li>
+                    <li>Shipping LLM-powered conversational workflows from MVP to production</li>
+                    <li>Full-stack delivery - Flask/FastAPI services, Docker deployments, and clean demos</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -72,61 +56,74 @@
     <!-- Projects Section - Interactive -->
     <section id="work" class="section">
         <div class="container">
-            <h2>What Have I Built?</h2>
-            <p class="section-intro">Here are some projects I'm particularly proud of...</p>
+            <h2>Flagship Projects</h2>
             
             <div class="projects-grid">
                 <div class="project-card interactive">
-                    <h3>AI-Powered Communication System</h3>
-                    <p class="project-description">Real-time transcription with 94% intent recognition accuracy</p>
+                    <h3>Speaker–Listener: Real-time Voice AI</h3>
+                    <p class="project-description">Dockerized Flask service with WebSockets + Whisper. ~30% latency reduction (1.0s → 0.7s), ~94% intent accuracy.</p>
                     <div class="project-meta">
-                        <span class="tech">Python, Flask, OpenAI, AWS</span>
-                        <span class="publication">Production System</span>
+                        <span class="tech">Python, Flask, WebSockets, Docker, Whisper, AWS</span>
                     </div>
                     <div class="project-actions">
-                        <a href="https://speaker-listener-web-ai.onrender.com" class="btn-link" target="_blank">→ Coming live soon!</a>
-                        <a href="https://github.com/imshrirangpatil/speaker-listener-web-ai" class="btn-link" target="_blank">→ Code</a>
+                        <a href="https://speaker-listener-web-ai.onrender.com" class="btn-link" target="_blank">→ Demo</a>
+                        <a href="https://github.com/imshrirangpatil/speaker-listener-web-ai" class="btn-link" target="_blank">→ GitHub</a>
                     </div>
                 </div>
 
                 <div class="project-card interactive">
-                    <h3>Python Humanoid Robot Animator</h3>
-                    <p class="project-description">Parser cut robot action script time 40%, mentored Joe’s thesis</p>
+                    <h3>Clipboard: Conversational AI for Experiments</h3>
+                    <p class="project-description">Conversational assistant for robot experiment setup. Guides protocol, tracks adherence, reduces friction.</p>
                     <div class="project-meta">
-                        <span class="tech">Python, Pepper Robotic, Gesture Creation, TTS</span>
-                        <span class="publication">Research Framework</span>
+                        <span class="tech">Python, NLP/LLM, web services</span>
                     </div>
                     <div class="project-actions">
-                        <a href="https://ir.library.oregonstate.edu/concern/honors_college_theses/xd07h2605" class="btn-link" target="_blank">→ Research</a>
-                        <a href="https://github.com/jconrow00/PythonParser" class="btn-link" target="_blank">→ Code</a>
-                    </div>
-                </div>
-
-                <div class="project-card interactive">
-                    <h3>EmotionSport – Facial Athletic Analysis</h3>
-                    <p class="project-description">90.67% accuracy on CK+485, on frequency, intensity & duration</p>
-                    <div class="project-meta">
-                        <span class="tech">CNN, Bi-LSTM, Computer Vision, Sports Analytics</span>
-                        <span class="publication">Group Project</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/imshrirangpatil/EmotionSport/blob/917348298683ac3b6a8062e49b9fe330a65a81b0/EmotionSport%20Presentation.pdf" class="btn-link" target="_blank">→ Presentation</a>
-                        <a href="https://github.com/imshrirangpatil/EmotionSport" class="btn-link" target="_blank">→ Code</a>
+                        <a href="https://www.researchgate.net/publication/395893927_Clipboard_A_Conversational_AI_to_Assist_Embodied_Robot_Experiment_Data_Collection?channel=doi&linkId=68d757c3d221a404b2a2e2c5&showFulltext=true" class="btn-link" target="_blank">→ Paper</a>
                     </div>
                 </div>
 
                 <div class="project-card interactive">
                     <h3>Multilingual ASR System</h3>
-                    <p class="project-description">92% accuracy across 27 languages, 10K+ audio files</p>
+                    <p class="project-description">CNN–RNN/BiGRU pipeline. ~92% accuracy across 27 languages, 10K+ audio files.</p>
                     <div class="project-meta">
-                        <span class="tech">CNN, RNN, Bi-GRU, MFCC</span>
-                        <span class="publication">Research at NUS</span>
+                        <span class="tech">PyTorch/TensorFlow, Python, MFCC</span>
                     </div>
                     <div class="project-actions">
-                        <a href="https://drive.google.com/file/d/140Kyt0JBA5rDxYY_tzGMyRrUGbh3qmXV/view" class="btn-link" target="_blank">→ Research</a>
-                        <a href="https://github.com/T-janhavi11/ASR-Project.git" class="btn-link" target="_blank">→ Code Confidential :(</a>
+                        <a href="https://drive.google.com/file/d/140Kyt0JBA5rDxYY_tzGMyRrUGbh3qmXV/view" class="btn-link" target="_blank">→ Report</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Embodied AI Section -->
+    <section id="embodied" class="section">
+        <div class="container">
+            <h2>Embodied AI</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card interactive">
+                    <h3>Speech2Action: Voice-to-Action</h3>
+                    <p class="project-description">~85% task success rate vs. ~70% baseline in underwater manipulation.</p>
+                    <div class="project-actions">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/11104542" class="btn-link" target="_blank">→ Paper</a>
+                        <a href="https://sites.google.com/view/fomosr2025/schedule#h.8ktruyp0h5y9" class="btn-link" target="_blank">→ Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof of Execution Section -->
+    <section id="proof" class="section">
+        <div class="container">
+            <h2>Proof of Execution</h2>
+            <div class="conversation-block">
+                <ul class="focus-list">
+                    <li>Dockerized and deployed conversational/voice services, optimized for latency</li>
+                    <li>Built datasets and evaluation loops for real user interactions (ran 30-participant studies)</li>
+                    <li>Mentored students and shipped tools that accelerated prototyping</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -134,8 +131,7 @@
     <!-- Publications Section -->
     <section id="research" class="section">
         <div class="container">
-            <h2>What Have I Discovered?</h2>
-            <p class="section-intro">Research that's making AI systems and robots more helpful...</p>
+            <h2>Publications</h2>
             
             <div class="publications-list">
                 <article class="publication-item">
@@ -181,7 +177,8 @@
     <section id="contact" class="section">
         <div class="container">
             <h2>Let's Talk</h2>
-            <p class="contact-intro">Interested in AI/ML collaboration or just want to chat about robots?</p>
+            <p class="contact-intro">Open to Conversational AI / NLP / Voice AI roles starting 2026.</p>
+            <p class="contact-cta">Hiring for someone who ships AI systems? Let's talk: imshrirangpatil@gmail.com</p>
             
             <div class="contact-grid">
                 <a href="mailto:imshrirangpatil@gmail.com" class="contact-item">
@@ -196,20 +193,18 @@
                     <span class="contact-label">GitHub</span>
                     <span class="contact-value">@imshrirangpatil</span>
                 </a>
-                <a href="https://x.com/imshrirangpatil" class="contact-item" target="_blank">
-                    <span class="contact-label">X/Twitter</span>
-                    <span class="contact-value">@imshrirangpatil</span>
+                <a href="docs/Shrirang_Patil_Resume.pdf" class="contact-item" target="_blank">
+                    <span class="contact-label">Resume PDF</span>
+                    <span class="contact-value">Download</span>
                 </a>
             </div>
-            
-            <p class="availability">Available for new opportunities • Graduating December 2025</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Shrirang Patil. All rights reserved.</p>
+            <p>&copy; 2026 Shrirang Patil. All rights reserved.</p>
         </div>
     </footer>
 
