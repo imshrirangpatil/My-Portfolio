@@ -186,11 +186,16 @@ a:hover {
 }
 
 .chat-label {
-    display: block;
-    font-size: 0.875rem;
-    color: var(--color-gray-medium);
-    font-weight: var(--font-weight-medium);
-    margin-bottom: var(--spacing-xs);
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+    /* Visually hidden but accessible to screen readers */
 }
 
 .chat-input {
@@ -690,6 +695,23 @@ a:hover {
     margin: 0;
 }
 
+/* iOS Safe Area Support */
+@supports (padding: max(0px)) {
+    .container {
+        padding-left: max(var(--spacing-md), env(safe-area-inset-left));
+        padding-right: max(var(--spacing-md), env(safe-area-inset-right));
+    }
+    
+    .hero {
+        padding-top: max(var(--spacing-lg), env(safe-area-inset-top));
+    }
+    
+    .section {
+        padding-left: max(0px, env(safe-area-inset-left));
+        padding-right: max(0px, env(safe-area-inset-right));
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-greeting {
@@ -706,10 +728,14 @@ a:hover {
     
     .suggested-actions {
         flex-direction: column;
+        gap: var(--spacing-sm);
     }
     
     .chat-btn {
         width: 100%;
+        padding: var(--spacing-sm) var(--spacing-md);
+        min-height: 44px; /* Better touch target */
+        font-size: 1rem;
     }
     
     .conversation-block p,
@@ -728,6 +754,18 @@ a:hover {
     .contact-grid {
         max-width: 100%;
         padding: 0 var(--spacing-sm);
+        gap: var(--spacing-md);
+    }
+    
+    .project-card,
+    .publication-item {
+        padding: var(--spacing-md);
+    }
+    
+    .project-description,
+    .pub-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
     
     .project-card h3,
@@ -743,15 +781,24 @@ a:hover {
     }
     
     .hero-greeting {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+        min-height: 3rem;
     }
     
     .hero-name {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-context {
+        font-size: 0.95rem;
     }
     
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
     
     .hero {
@@ -759,17 +806,60 @@ a:hover {
     }
     
     .section {
-        padding: var(--spacing-lg) 0;
+        padding: var(--spacing-md) 0;
+    }
+    
+    .hero {
+        padding: var(--spacing-md) 0 var(--spacing-lg);
     }
     
     .chat-interface {
         padding: var(--spacing-sm);
+        margin-top: var(--spacing-md);
+    }
+    
+    .chat-input {
+        padding: var(--spacing-md);
+        font-size: 16px; /* Prevents zoom on iOS */
+        min-height: 44px; /* Better touch target */
+    }
+    
+    .project-card,
+    .publication-item {
+        padding: var(--spacing-md);
     }
     
     .project-card h3,
     .publication-item h3 {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         letter-spacing: -0.02em;
+        line-height: 1.4;
+    }
+    
+    .btn-link {
+        padding: var(--spacing-sm) 0;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    .contact-item {
+        padding: var(--spacing-md);
+        min-height: 60px;
+    }
+    
+    .contact-label {
+        font-size: 0.8rem;
+    }
+    
+    .contact-value {
+        font-size: 0.95rem;
+    }
+    
+    .section-intro,
+    .contact-intro {
+        font-size: 1rem;
+        padding: 0 var(--spacing-sm);
     }
 }
 
