@@ -273,4 +273,3 @@ document.addEventListener('DOMContentLoaded', function() {
     🔗 imshrirangpatil@gmail.com | Open to roles starting 2026
     `);
 });
-});
