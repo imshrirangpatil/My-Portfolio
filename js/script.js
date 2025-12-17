@@ -56,20 +56,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Conversation responses
     const conversationResponses = {
-        'research': 'I get excited about making AI systems and robots understand humans better! My recent work includes building AI "Clipboard" agents for robot experiments, teaching underwater robots to follow voice commands, and developing emotion analysis systems for sports performance.',
-        'work': 'I\'ve built some cool stuff! Voice-controlled underwater robots, emotion analysis systems with 90.67% accuracy, Python-based robot animators, and multilingual speech recognition systems. Check out my projects below!',
-        'projects': 'I\'ve built some cool stuff! Voice-controlled underwater robots, emotion analysis systems with 90.67% accuracy, Python-based robot animators, and multilingual speech recognition systems. Check out my projects below!',
-        'publications': 'I\'ve published research on human-AI/robot interaction, conversational AI, and speech technologies. My work has been accepted at top conferences like ICSR FoMoSR Workshop, OCEANS, and HRI LLMs in HRI Workshop.',
-        'experience': 'Currently wrapping up my MS at Oregon State University (Dec 2025) as a Graduate Research Assistant, previously worked on multilingual ASR at National University of Singapore.',
-        'contact': 'Best way to reach me is email: imshrirangpatil@gmail.com. You can also find me on LinkedIn, GitHub, and X/Twitter @imshrirangpatil. I\'m always excited to chat about AI/ML opportunities!',
-        'resume': 'You can download my resume below. It includes my research experience, publications, and technical skills.',
-        'ai': 'I work on conversational AI systems that help robots understand and respond to human commands. My research focuses on making human-AI/robot interaction more natural and intuitive.',
-        'ml': 'I specialize in machine learning for robotics applications, including speech recognition, natural language processing, computer vision, and emotion analysis. I love working with CNNs, Bi-LSTMs, and deep learning models.',
-        'robotics': 'I build robots that can understand and respond to human commands! My work includes underwater robots, conversational AI assistants, Python-based robot animators, and human-AI/robot interaction systems.',
-        'emotion': 'I developed an emotion analysis system for sports performance! It achieved 90.67% accuracy on the CK+485 dataset using CNN and Bi-LSTM models, providing quantified emotional metrics for athletic insights.',
-        'sports': 'I built an emotion analysis system for sports performance! It achieved 90.67% accuracy on the CK+485 dataset using CNN and Bi-LSTM models, providing quantified emotional metrics for athletic insights.',
-        'hello': 'Hi there! I\'m Shrirang, an AI/ML researcher who gets excited about making AI systems and robots understand humans better. Feel free to ask me about my work, research, or just say hello!',
-        'hi': 'Hi there! I\'m Shrirang, an AI/ML researcher who gets excited about making AI systems and robots understand humans better. Feel free to ask me about my work, research, or just say hello!'
+        'research': 'I build voice AI systems that actually work in production. Most of my work is around making robots understand what people say and turning that into actions. I\'ve published at ICSR, OCEANS, and HRI.',
+        'work': 'I built a real-time transcription system that cut latency by 30%, a conversational assistant for robot experiments, and a multilingual ASR that handles 27 languages. Check out the projects below!',
+        'projects': 'I built a real-time transcription system that cut latency by 30%, a conversational assistant for robot experiments, and a multilingual ASR that handles 27 languages. Check out the projects below!',
+        'publications': 'I\'ve published on conversational AI for robots, voice-to-action systems, and LLMs in human-robot interaction. Papers are at ICSR, OCEANS, and HRI workshops.',
+        'experience': 'I\'ve been building production voice AI systems and working on embodied AI research. Before that, I worked on multilingual ASR at NUS. Currently wrapping up my MS at OSU.',
+        'contact': 'I\'m open to roles starting 2026. If you\'re hiring for someone who ships AI systems, let\'s chat: imshrirangpatil@gmail.com',
+        'resume': 'You can download it below. It has all the details about my projects, publications, and experience.',
+        'ai': 'I work on conversational AI systems - basically making robots and AI understand what people want and respond naturally. Most of my work is production-focused.',
+        'ml': 'I use ML for real-world systems - speech recognition, intent understanding, that kind of thing. I like the challenge of making models work reliably in production.',
+        'voice': 'I built a real-time voice AI backend that reduced latency by about 30% and got 94% intent accuracy. It uses WebSockets and streaming ASR.',
+        'asr': 'I built a multilingual ASR system that handles 27 languages with 92% accuracy. Processed over 10K audio files using CNN-RNN architectures.',
+        'conversational': 'I build conversational workflows that actually ship. The Clipboard project is a good example - it helps researchers set up robot experiments through conversation.',
+        'hello': 'Hey! I\'m Shrirang. I build voice AI systems and work on making robots understand humans better. What would you like to know?',
+        'hi': 'Hey! I\'m Shrirang. I build voice AI systems and work on making robots understand humans better. What would you like to know?'
     };
 
     function handleChatInput(input) {
@@ -82,17 +82,43 @@ document.addEventListener('DOMContentLoaded', function() {
             return conversationResponses[matchedKeyword];
         }
         
-        return "That's interesting! Feel free to explore my work above or reach out directly. You can ask me about my research, projects, or experience.";
+        return "That's interesting! Feel free to explore my work above or ask me something specific. I'm happy to chat about what I've built or what I'm working on.";
     }
 
     function showResponse(response) {
-        chatResponse.textContent = response;
-        chatResponse.classList.add('show');
+        // Clear any existing timeout
+        if (chatResponse.timeoutId) {
+            clearTimeout(chatResponse.timeoutId);
+        }
         
-        // Auto-hide after 5 seconds
-        setTimeout(() => {
-            chatResponse.classList.remove('show');
-        }, 5000);
+        chatResponse.textContent = '';
+        chatResponse.classList.remove('typing', 'show');
+        
+        // Force reflow to ensure class removal is applied
+        void chatResponse.offsetHeight;
+        
+        chatResponse.classList.add('show', 'typing');
+        
+        // Typing animation
+        let i = 0;
+        const typingSpeed = 30;
+        
+        function typeChar() {
+            if (i < response.length) {
+                chatResponse.textContent += response.charAt(i);
+                i++;
+                setTimeout(typeChar, typingSpeed);
+            } else {
+                // Remove typing class to hide cursor
+                chatResponse.classList.remove('typing');
+                // Auto-hide after 8 seconds (longer since it's typed)
+                chatResponse.timeoutId = setTimeout(() => {
+                    chatResponse.classList.remove('show');
+                }, 8000);
+            }
+        }
+        
+        typeChar();
     }
 
     // Chat input handling
@@ -154,17 +180,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
             }
         });
     }, observerOptions);
 
     // Observe project cards and publication items
-    document.querySelectorAll('.project-card, .publication-item').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    const animatedElements = document.querySelectorAll('.project-card, .publication-item');
+    animatedElements.forEach(el => {
+        // Check if element is already in viewport on load
+        const rect = el.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        if (isVisible) {
+            // Small delay to ensure smooth animation
+            setTimeout(() => {
+                el.classList.add('visible');
+            }, 100);
+        }
         observer.observe(el);
     });
 
@@ -213,19 +245,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ===== CONSOLE WELCOME MESSAGE =====
     console.log(`
-    🚀 Welcome to Shrirang Patil's Portfolio!
+    🚀 Shrirang Patil - AI Engineer Portfolio
     
-    Built with inspiration from Adrian Zumbrunnen's conversational design.
-    
-    💡 Try typing in the chat interface:
-    - "research" - Learn about my AI research
-    - "projects" - See what I've built
-    - "contact" - Get in touch
-    
-    🔗 Connect with me:
-    - Email: imshrirangpatil@gmail.com
-    - LinkedIn: linkedin.com/in/imshrirangpatil
-    - GitHub: github.com/imshrirangpatil
-    - X/Twitter: x.com/imshrirangpatil
+    💡 Chat: "research", "projects", "voice", "contact"
+    🔗 imshrirangpatil@gmail.com | Open to roles starting 2026
     `);
 });
