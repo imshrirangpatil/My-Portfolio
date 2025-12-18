@@ -96,7 +96,8 @@ document.addEventListener('DOMContentLoaded', function() {
             chatResponse.typingTimeoutId = null;
         }
         
-        // Generate unique animation ID to track the current animation
+        // Invalidate any ongoing animation by updating the animation ID
+        // This ensures any pending typeChar() calls will exit early
         const animationId = Date.now();
         chatResponse._currentAnimationId = animationId;
         
@@ -116,12 +117,15 @@ document.addEventListener('DOMContentLoaded', function() {
         function typeChar() {
             // Check if this animation is still the current one (not cancelled by new message)
             if (chatResponse._currentAnimationId !== animationId) {
+                // Animation was cancelled, clean up and exit
+                chatResponse.typingTimeoutId = null;
                 return;
             }
             
             if (i < response.length) {
                 chatResponse.textContent += response.charAt(i);
                 i++;
+                // Store timeout ID so it can be cleared if a new message arrives
                 chatResponse.typingTimeoutId = setTimeout(typeChar, typingSpeed);
             } else {
                 // Only complete if this is still the current animation
@@ -130,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     chatResponse.classList.remove('typing');
                     // Auto-hide after 8 seconds (longer since it's typed)
                     chatResponse.timeoutId = setTimeout(() => {
+                        // Double-check animation ID before hiding
                         if (chatResponse._currentAnimationId === animationId) {
                             chatResponse.classList.remove('show');
                         }
@@ -257,11 +262,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Focus management for chat input
     if (chatInput) {
         chatInput.addEventListener('focus', function() {
-            this.parentElement.style.borderColor = 'var(--color-black)';
+            // Use actual color value since inline styles can't resolve CSS custom properties
+            // Modify the input's border directly, not the parent element
+            this.style.borderColor = '#1a1a1a';
         });
         
         chatInput.addEventListener('blur', function() {
-            this.parentElement.style.borderColor = 'var(--color-gray-light)';
+            // Use actual color value since inline styles can't resolve CSS custom properties
+            // Modify the input's border directly, not the parent element
+            this.style.borderColor = '#cccccc';
         });
     }
 
