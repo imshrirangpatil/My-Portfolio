@@ -695,7 +695,7 @@ a:hover {
     margin: 0;
 }
 
-/* iOS Safe Area Support */
+/* iOS Safe Area Support - Prevents content from being obscured by notches */
 @supports (padding: max(0px)) {
     .container {
         padding-left: max(var(--spacing-md), env(safe-area-inset-left));
@@ -704,11 +704,23 @@ a:hover {
     
     .hero {
         padding-top: max(var(--spacing-lg), env(safe-area-inset-top));
+        padding-bottom: max(0px, env(safe-area-inset-bottom));
     }
     
     .section {
         padding-left: max(0px, env(safe-area-inset-left));
         padding-right: max(0px, env(safe-area-inset-right));
+        padding-bottom: max(0px, env(safe-area-inset-bottom));
+    }
+    
+    .chat-interface {
+        margin-bottom: max(0px, env(safe-area-inset-bottom));
+    }
+    
+    .footer {
+        padding-bottom: max(var(--spacing-md), env(safe-area-inset-bottom));
+        padding-left: max(var(--spacing-md), env(safe-area-inset-left));
+        padding-right: max(var(--spacing-md), env(safe-area-inset-right));
     }
 }
 
